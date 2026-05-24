@@ -1,0 +1,58 @@
+
+ RUN  v3.2.4 /home/user/uni-2025/DSI/PRACTICA-EXAMEN/Examen-DSI-wuhola1
+
+stdout | test/serie.spec.ts
+Connection to MongoDB server established
+
+stdout | test/usuario.spec.ts
+Connection to MongoDB server established
+
+stdout | test/serie.spec.ts > POST /series > Should successfully create a new series
+DEBUG_SERIE_POST [33m201[39m {
+  nombre: [32m'UT_SERIE_SPEC_6a1361dac92698fdfd39c04b'[39m,
+  sinopsis: [32m'Una familia mafiosa en Nueva Jersey.'[39m,
+  [32m'año_estreno'[39m: [33m1999[39m,
+  n_temporadas: [33m6[39m,
+  duracion_media_capitulo: [33m55[39m,
+  n_episodios_temporada: [
+    {
+      temporada: [32m'temporada 1'[39m,
+      n_episodios: [33m13[39m,
+      _id: [32m'6a1361dac92698fdfd39c04e'[39m
+    }
+  ],
+  reparto: [
+    {
+      actor: [32m'James Gandolfini'[39m,
+      personaje: [32m'Tony Soprano'[39m,
+      _id: [32m'6a1361dac92698fdfd39c04f'[39m
+    }
+  ],
+  direccion: [
+    {
+      nombre: [32m'David Chase'[39m,
+      rol: [32m'Creador'[39m,
+      _id: [32m'6a1361dac92698fdfd39c050'[39m
+    }
+  ],
+  generos: [ [32m'drama'[39m ],
+  usuarios: [ [32m'6a1361dac92698fdfd39c04b'[39m ],
+  _id: [32m'6a1361dac92698fdfd39c04d'[39m,
+  __v: [33m0[39m
+}
+
+ ✓ test/usuario.spec.ts (11 tests) 2416ms
+   ✓ POST /usuario > Should successfully create a new user  627ms
+   ✓ DELETE /usuario > Should delete user when linked series exists  438ms
+ ✓ test/serie.spec.ts (10 tests) 3015ms
+   ✓ POST /series > Should successfully create a new series  728ms
+   ✓ GET /series > Should return all series  349ms
+   ✓ GET /series/:id > Should return one series by id  345ms
+   ✓ PATCH /series/:id > Should update a series  363ms
+   ✓ DELETE /series/:id > Should delete one series  343ms
+
+ Test Files  2 passed (2)
+      Tests  21 passed (21)
+   Start at  21:38:48
+   Duration  4.18s (transform 86ms, setup 0ms, collect 1.93s, tests 5.43s, environment 0ms, prepare 111ms)
+

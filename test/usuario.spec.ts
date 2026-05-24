@@ -18,9 +18,9 @@ const buildSeriePayload = (userId: string) => ({
   año_estreno: 1999,
   n_temporadas: 6,
   duracion_media_capitulo: 55,
-  n_episodios_temporada: [["temporada 1", 13]],
-  reparto: [["James Gandolfini", "Tony Soprano"]],
-  direccion: [["David Chase", "Creador"]],
+  n_episodios_temporada: [{ temporada: "temporada 1", n_episodios: 13 }],
+  reparto: [{ actor: "James Gandolfini", personaje: "Tony Soprano" }],
+  direccion: [{ nombre: "David Chase", rol: "Creador" }],
   generos: ["drama"],
   usuarios: [userId],
 });
