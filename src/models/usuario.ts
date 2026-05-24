@@ -47,5 +47,4 @@ const UsuarioSchema = new Schema<IUsuario> ({
         enum: GenerosPermitidos,
     }
 })
-
 export const Usuario = model<IUsuario>('Usuario', UsuarioSchema )
